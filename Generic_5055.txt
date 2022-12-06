@@ -1,0 +1,52 @@
+.open hppr1
+
+
+CREATE TABLE basics
+(
+pid varchar(10),
+date varchar(12),
+price varchar(12),
+bedrooms varchar(2),
+sft_living varchar(6)
+);
+
+CREATE TABLE view1
+(
+pid varchar(10),
+sft_lot varchar(6),
+floors varchar(2),
+waterfront varchar(1),
+viewes varchar(1),
+condition varchar(1)
+);
+
+CREATE TABLE grade
+(
+pid varchar(10),
+grade varchar(2),
+sft_base varchar(6),
+sft_above varchar(6),
+yr_built varchar(6),
+yr_renvt varchar(6)
+);
+
+CREATE TABLE opara
+(
+pid varchar(10),
+zpcode varchar(10),
+latit varchar(10),
+longit varchar(40),
+sft_livext varchar(6),
+sft_lotext varchar(6)
+);
+
+
+pyuic5 hppr.ui -o hppr.py
+pyuic5 basics.ui -o basics.py
+pyuic5 view.ui -o view.py
+pyuic5 oparams.ui -o oparams.py
+pyuic5 grade.ui -o grade.py
+
+
+
+
